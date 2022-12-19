@@ -1,0 +1,96 @@
+body {
+    background-color: hsl(30, 38%, 92%);
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+img,
+picture,
+video {
+    max-width: 100%;
+}
+
+
+#product-card {
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    overflow: hidden;
+    width: 50vw;
+}
+
+#image-container{
+    width: 50%;
+}
+
+#product-card-text {
+    padding: 1rem 2rem 2rem 2rem;
+    width: calc(50% - 4rem);
+}
+
+
+h2 {
+    font-weight: 500;
+    letter-spacing: .3rem;
+    font-size: calc(.2rem + 1vw);
+    color: hsl(228, 12%, 48%);
+}
+
+h1 {
+    font-size: calc(1.5rem + 1vw);
+    line-height: 1;
+}
+
+p {
+    font-size: calc(.2rem + 1vw);
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+}
+
+#price {
+    font-size: calc(1.5rem + 1vw) ;
+    color: hsl(158, 36%, 37%);
+}
+
+.important-text{
+    font-family: Fraunces, serif;
+    font-weight: 700;
+    font-size: calc(1.5rem + 1vw)
+}
+
+#price-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 25px;
+    max-height: 5em;
+}
+
+#discarded-price {
+    font-size: calc(.2rem + 1vw);
+    color: hsl(228, 12%, 48%)
+}
+
+button {
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    border-radius: 10px;
+    padding: 1.5em;
+    font-family: Montserrat;
+    min-width: 100%;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color:  hsl(212, 21%, 14%);
+    cursor: pointer;
+}
+
+#product-card-image {
+    width: 100%;
+    height: 100%;
+}
