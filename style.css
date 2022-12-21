@@ -1,7 +1,6 @@
 body {
     background-color: hsl(30, 38%, 92%);
     font-family: Montserrat, sans-serif;
-    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +20,7 @@ video {
     display: flex;
     overflow: hidden;
     width: 50vw;
-    height: 70vh;
+    height: calc(50vw * 0.75);
 }
 
 #image-container{
@@ -39,11 +38,13 @@ h2 {
     letter-spacing: .3rem;
     font-size: calc(.1rem + 1vw);
     color: hsl(228, 12%, 48%);
+    margin-bottom: 0;
 }
 
 h1 {
     line-height: 1;
-    margin-right: 2.5rem;
+    margin-top: 1rem;
+    margin-right: 0rem;
 }
 
 #price {
@@ -54,7 +55,7 @@ h1 {
 .important-text{
     font-family: Fraunces, serif;
     font-weight: 700;
-    font-size: calc(1.2rem + 1vw)
+    font-size: clamp(1.5rem, calc(1.5rem + 1vw), 4rem);
 }
 
 #price-section{
@@ -62,7 +63,7 @@ h1 {
     align-items: center;
     column-gap: 1rem;
     flex-wrap: wrap;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 #discarded-price {
@@ -75,7 +76,6 @@ button {
     border: none;
     border-radius: 10px;
     padding: 1.5em;
-    font-family: Montserrat;
     min-width: 100%;
     color: white;
     font-weight: bold;
@@ -99,3 +99,54 @@ button:hover {
     margin-right: 2rem;
     margin-bottom: 0;
 }
+
+@media (min-width: 1920px) {
+    #product-card-text-description {
+        font-size: calc(.08rem + 1vw);
+    }
+
+    .important-text{
+        font-size: calc(3rem + 1vw)
+    }
+}
+@media (max-width: 1200px) {
+    #product-card-text-description {
+        font-size: calc(.05rem + 1vw);
+    }
+
+    .important-text{
+        font-size: calc(.7rem + 1vw)
+    }
+}
+
+@media (max-width: 991px) {
+    #product-card {
+        flex-direction: column;
+        height: 90vh;
+        width: 90vw;
+    }
+    #image-container{
+        width: 100%;
+        height: 39%;
+    }
+    #product-card-text {
+        padding: 1rem 2rem 2rem 2rem;
+        width: calc(100% - 4rem)
+    }
+    #product-card-text-description {
+        font-size: calc(1rem + 1vw);
+    }
+
+    .important-text{
+        font-size: calc(1.5rem + 1vw)
+    }
+
+    h2 {
+        font-size: calc(.5rem + 1vw);
+    }
+    #discarded-price {
+        font-size: calc(.5rem + 1vw);
+        color: hsl(228, 12%, 48%)
+    }
+}
+
